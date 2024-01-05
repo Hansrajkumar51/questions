@@ -4,7 +4,7 @@ void main() {
   List<String> names = ['hansraj', 'kapil', 'arvind'];
   print('enter a character to find in name');
   String char = stdin.readLineSync()!.trim().toString();
-
+  int sumofcount = 0;
   int count = 0;
   for (int i = 0; i < names.length; i++) {
     for (int j = 0; j < names[i].length; j++) {
@@ -13,8 +13,10 @@ void main() {
       }
     }
     print('the character has appeard $count in ${names[i]}');
+    sumofcount += count;
     count = 0;
   }
+  print('the character has appeard total $sumofcount ');
 }
 // import 'dart:io';
 
